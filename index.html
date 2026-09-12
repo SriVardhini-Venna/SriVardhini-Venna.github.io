@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sri Vardhini Venna | Data Scientist</title>
+  <meta name="description" content="Sri Vardhini Venna — AI/ML, software, and data engineer building production-ready intelligent systems, cloud applications, APIs, and data platforms." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
@@ -487,13 +488,61 @@
       .tl-body { padding: 0.5rem 0 2rem; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 2rem; }
     }
+
+    /* ─── 2D / 3D HYBRID EXPERIENCE ─── */
+    :root { --bg:#05070d; --surface:#090d17; --surface2:#0d1320; --border:rgba(130,151,190,.16); --teal:#78f7d4; --teal-dim:#38cfa8; --violet:#9d8cff; --blue:#56b8ff; --amber:#ffc56b; --text:#f3f6fb; --text-muted:#99a6ba; --text-dim:#536078; }
+    body::before { content:''; position:fixed; inset:0; z-index:-2; pointer-events:none; background:radial-gradient(circle at 12% 8%,rgba(86,184,255,.10),transparent 26%),radial-gradient(circle at 82% 16%,rgba(157,140,255,.11),transparent 24%),var(--bg); }
+    nav { padding:1rem clamp(1.25rem,5vw,5.5rem); background:rgba(5,7,13,.72); }
+    .nav-logo { display:flex; align-items:center; gap:.65rem; }
+    .nav-logo::before { content:''; width:9px; height:9px; border-radius:50%; background:var(--teal); box-shadow:0 0 16px var(--teal); }
+    .nav-role { font-family:var(--font-mono); font-size:.62rem; color:var(--text-dim); letter-spacing:.08em; }
+    section { padding-left:clamp(1.25rem,6vw,7rem); padding-right:clamp(1.25rem,6vw,7rem); }
+    #hero { min-height:100svh; display:grid; grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr); gap:4vw; padding-left:clamp(1.25rem,6vw,7rem); padding-right:clamp(1.25rem,6vw,7rem); }
+    .hero-content { max-width:760px; }
+    h1.hero-name { font-size:clamp(3.6rem,7.4vw,7rem); }
+    h1.hero-name span { background:linear-gradient(90deg,var(--teal),var(--blue),var(--violet)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero-eyebrow { padding:.45rem .75rem; border:1px solid rgba(120,247,212,.25); border-radius:99px; background:rgba(120,247,212,.05); }
+    .hero-eyebrow::before { width:7px; height:7px; border-radius:50%; box-shadow:0 0 10px var(--teal); }
+    .role-strip { display:flex; flex-wrap:wrap; gap:.55rem; margin:0 0 1.65rem; opacity:0; animation:fadeUp .7s .58s forwards; }
+    .role-pill { padding:.38rem .72rem; border:1px solid var(--border); border-radius:4px; color:var(--text-muted); background:rgba(255,255,255,.025); font:400 .68rem var(--font-mono); letter-spacing:.04em; }
+    .role-pill:first-child { color:var(--teal); border-color:rgba(120,247,212,.3); }
+    .hero-lab { position:relative; min-height:560px; perspective:1200px; display:grid; place-items:center; z-index:1; }
+    .lab-stage { width:min(470px,100%); aspect-ratio:1; position:relative; transform-style:preserve-3d; transition:transform .25s ease-out; }
+    .lab-glow { position:absolute; inset:12%; border-radius:50%; background:radial-gradient(circle,rgba(86,184,255,.16),rgba(157,140,255,.05) 48%,transparent 68%); filter:blur(15px); transform:translateZ(-90px); }
+    .core { position:absolute; left:50%; top:50%; width:142px; height:142px; transform:translate(-50%,-50%) translateZ(70px); border:1px solid rgba(120,247,212,.42); border-radius:28px; background:linear-gradient(145deg,rgba(19,29,47,.93),rgba(7,11,20,.92)); box-shadow:0 30px 70px rgba(0,0,0,.45),inset 0 0 45px rgba(120,247,212,.08); display:grid; place-items:center; }
+    .core::before,.core::after { content:''; position:absolute; inset:-16px; border:1px solid rgba(120,247,212,.12); border-radius:36px; animation:pulse 3s ease-in-out infinite; }
+    .core::after { inset:-34px; border-color:rgba(86,184,255,.08); animation-delay:1.5s; }
+    .core-mark { font:800 2.2rem var(--font-display); color:var(--teal); text-shadow:0 0 20px rgba(120,247,212,.45); }
+    .core small { position:absolute; bottom:24px; font:400 .52rem var(--font-mono); color:var(--text-dim); letter-spacing:.18em; }
+    .orbit { position:absolute; inset:12%; border:1px solid rgba(126,149,185,.14); border-radius:50%; transform:rotateX(65deg) rotateZ(-18deg); transform-style:preserve-3d; animation:spin 20s linear infinite; }
+    .orbit.two { inset:23%; transform:rotateX(72deg) rotateZ(52deg); animation-duration:13s; animation-direction:reverse; border-color:rgba(157,140,255,.18); }
+    .node { position:absolute; width:12px; height:12px; border-radius:50%; background:var(--blue); box-shadow:0 0 18px var(--blue); }
+    .node.a { left:8%; top:22%; } .node.b { right:2%; top:47%; background:var(--violet); box-shadow:0 0 18px var(--violet); } .node.c { left:42%; bottom:-5%; background:var(--teal); box-shadow:0 0 18px var(--teal); }
+    .data-card { position:absolute; width:148px; padding:.8rem .9rem; border:1px solid var(--border); border-radius:8px; background:rgba(10,15,26,.86); backdrop-filter:blur(12px); box-shadow:0 16px 45px rgba(0,0,0,.28); font:.61rem var(--font-mono); color:var(--text-muted); transform-style:preserve-3d; }
+    .data-card strong { display:block; margin-top:.28rem; color:var(--text); font-size:.78rem; font-weight:500; }
+    .data-card::before { content:''; display:inline-block; width:6px; height:6px; margin-right:6px; border-radius:50%; background:var(--teal); box-shadow:0 0 8px var(--teal); }
+    .card-ai { top:8%; right:-2%; transform:translateZ(110px) rotateY(-9deg); }
+    .card-data { bottom:12%; left:-2%; transform:translateZ(40px) rotateY(8deg); }
+    .card-cloud { bottom:5%; right:4%; transform:translateZ(130px) rotateY(-12deg); }
+    .lab-caption { position:absolute; bottom:2%; left:50%; transform:translateX(-50%); white-space:nowrap; color:var(--text-dim); font:.6rem var(--font-mono); letter-spacing:.12em; }
+    .hero-stats { right:clamp(1.25rem,3vw,4rem); bottom:2rem; flex-direction:row; gap:1rem; }
+    .stat { text-align:left; border-right:0; border-top:1px solid var(--border); padding:.65rem 1rem 0; }
+    .stat-num { font-size:1.25rem; }
+    .edu-card,.project-card,.skill-block,.cert-item,.tl-body { background:linear-gradient(145deg,rgba(15,21,35,.92),rgba(8,12,21,.95)); box-shadow:0 18px 45px rgba(0,0,0,.14); }
+    .edu-card:hover,.project-card:hover,.skill-block:hover { transform:translateY(-4px); border-color:rgba(120,247,212,.38); }
+    .project-card,.skill-block,.edu-card { transition:transform .25s ease,border-color .25s ease; }
+    @keyframes spin { to { transform:rotateX(65deg) rotateZ(342deg); } }
+    @keyframes pulse { 0%,100%{opacity:.3;transform:scale(.94)} 50%{opacity:1;transform:scale(1.03)} }
+    @media (max-width:1050px) { #hero { grid-template-columns:1fr; padding-top:8rem; } .hero-lab { min-height:440px; } .lab-stage { width:390px; } .hero-stats { display:none; } }
+    @media (max-width:600px) { .nav-role{display:none}.hero-lab{min-height:350px}.lab-stage{width:310px}.data-card{width:120px;font-size:.52rem}.core{width:112px;height:112px}.core-mark{font-size:1.7rem}.role-strip{gap:.4rem} #beyond>div[style*="grid-template-columns"]{grid-template-columns:1fr!important} #beyond [style*="grid-column:span 2"]{grid-column:span 1!important} #beyond [style*="repeat(3,1fr)"]{grid-template-columns:1fr!important} }
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto} *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important} }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">SV</div>
+    <div class="nav-logo">SV <span class="nav-role">ENGINEERING PORTFOLIO</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -511,7 +560,11 @@
     <div class="hero-content">
       <div class="hero-eyebrow">Open to opportunities · AI · Software · Cloud · Data · IT</div>
       <h1 class="hero-name">Sri Vardhini<br/><span>Venna</span></h1>
-      <div class="hero-title">Software &amp; Data Engineer</div>
+      <div class="hero-title">AI/ML · Software · Data Engineer</div>
+      <div class="role-strip" aria-label="Target roles">
+        <span class="role-pill">AI Engineer</span><span class="role-pill">ML Engineer</span>
+        <span class="role-pill">Software Engineer</span><span class="role-pill">Data Engineer</span>
+      </div>
       <p class="hero-desc">
         MS Engineering Data Science graduate (University of Houston, May 2026) with 2+ years of hands-on
         experience building AI/ML pipelines, cloud-native applications, REST APIs, and production-grade
@@ -530,6 +583,18 @@
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
+      </div>
+    </div>
+    <div class="hero-lab" aria-label="Interactive engineering system visualization">
+      <div class="lab-stage" id="labStage">
+        <div class="lab-glow"></div>
+        <div class="orbit"><i class="node a"></i><i class="node b"></i><i class="node c"></i></div>
+        <div class="orbit two"><i class="node a"></i><i class="node b"></i></div>
+        <div class="core"><span class="core-mark">SV</span><small>BUILD · TRAIN · SHIP</small></div>
+        <div class="data-card card-ai">MODEL STATUS<strong>Pipeline ready</strong></div>
+        <div class="data-card card-data">DATA LAYER<strong>10-table schema</strong></div>
+        <div class="data-card card-cloud">CLOUD RUNTIME<strong>AWS · Azure</strong></div>
+        <div class="lab-caption">MOVE CURSOR TO EXPLORE THE SYSTEM</div>
       </div>
     </div>
     <div class="hero-stats">
@@ -558,7 +623,7 @@
     <h2 class="section-title">Turning data into<br/><em>decisions</em></h2>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>I'm a Data Science graduate student at the University of Houston (GPA 3.74/4.0) <strong style="color:var(--teal)">graduating May 12, 2026</strong>, with 2+ years of combined industry and academic experience spanning machine learning, cloud infrastructure, REST API development, and full-stack software engineering. I hold <strong style="color:var(--teal)">9+ certifications</strong> including 2× AWS, 3× Microsoft Azure, RedHat, and NPTEL Elite from IIT Roorkee.</p>
+        <p>I'm an Engineering Data Science graduate from the University of Houston (GPA 3.74/4.0), with 2+ years of combined industry and academic experience spanning machine learning, cloud infrastructure, REST API development, and full-stack software engineering. I hold <strong style="color:var(--teal)">9+ certifications</strong> including 2× AWS, 3× Microsoft Azure, RedHat, and NPTEL Elite from IIT Roorkee.</p>
         <p>My hands-on work includes building multilingual NLP and vector-search pipelines at Tata Elxsi, deploying Azure cloud applications recognized by Microsoft's Hall of Fame program, and teaching 200+ students as a Teaching Assistant in Advanced Information Systems Development. I also served as a <strong style="color:var(--teal)">Student Peer Mentor</strong> at KL University throughout my B.Tech, supporting peers in coursework, certifications, and research.</p>
         <p>Open to <strong style="color:var(--teal)">full-time roles and internships</strong> anywhere in the United States in AI/ML Engineering, Software Engineering, Cloud, Data Science, and IT. Available from May 2026.</p>
 
@@ -1036,7 +1101,7 @@
     <div class="contact-inner reveal">
       <div class="section-label" style="justify-content:center;">Contact</div>
       <h2 class="section-title">Let's<br/><em>connect</em></h2>
-      <p>Graduating <strong style="color:var(--teal)">May 12, 2026</strong> from University of Houston with an MS in Engineering Data Science. Open to <strong style="color:var(--teal)">full-time roles and internships</strong> in AI/ML Engineering, Software Engineering, Cloud, Data Science, and IT, anywhere in the United States. Let's build something impactful together.</p>
+      <p>MS Engineering Data Science graduate from the University of Houston. Open to <strong style="color:var(--teal)">full-time roles and internships</strong> in AI/ML Engineering, Software Engineering, Cloud, Data Science, and IT, anywhere in the United States. Let's build something impactful together.</p>
       <div class="contact-links">
         <a href="mailto:venna16042003@gmail.com" class="contact-link">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1061,7 +1126,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2025 Sri Vardhini Venna</span>
+    <span>© 2026 Sri Vardhini Venna</span>
     <span>MS Engineering Data Science · University of Houston</span>
   </footer>
 
@@ -1072,6 +1137,18 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
+    const lab = document.querySelector('.hero-lab');
+    const stage = document.getElementById('labStage');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (lab && stage && !reducedMotion) {
+      lab.addEventListener('pointermove', (event) => {
+        const bounds = lab.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - .5;
+        const y = (event.clientY - bounds.top) / bounds.height - .5;
+        stage.style.transform = `rotateX(${-y * 8}deg) rotateY(${x * 10}deg)`;
+      });
+      lab.addEventListener('pointerleave', () => { stage.style.transform = 'rotateX(0) rotateY(0)'; });
+    }
   </script>
 </body>
 </html>
