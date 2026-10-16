@@ -940,6 +940,43 @@ details[open]>summary>.expand-icon,.case-study[open]>summary>span {
   color:var(--muted);
   margin-top:4px;
 }
+.education .degree-awarded {
+  margin-top:9px;
+  font-size:10px;
+  color:var(--muted);
+}
+.coursework {
+  margin-top:17px;
+  border-top:1px solid var(--line);
+}
+.coursework>summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:12px 0;
+  font-size:11px;
+}
+.coursework>summary:hover {
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+.coursework>summary>span {
+  font-size:17px;
+  transition:transform .2s;
+}
+.coursework[open]>summary>span {
+  transform:rotate(45deg);
+}
+.coursework-list {
+  padding:0 0 4px 16px;
+  font-size:11px;
+  line-height:1.9;
+  color:var(--muted);
+}
+.coursework-list span {
+  font-size:10px;
+}
 .education-gpa {
   display:inline-block;
   font:9px var(--mono);
