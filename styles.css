@@ -974,9 +974,6 @@ details[open]>summary>.expand-icon,.case-study[open]>summary>span {
   line-height:1.9;
   color:var(--muted);
 }
-.coursework-list span {
-  font-size:10px;
-}
 .education-gpa {
   display:inline-block;
   font:9px var(--mono);
