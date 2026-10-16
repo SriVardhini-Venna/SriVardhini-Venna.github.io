@@ -1,10 +1,12 @@
-/* A monochrome editorial portfolio. No remote fonts or UI dependencies. */
+/* An editorial portfolio with coordinated colors for each area of work. */
 :root {
-  --paper:#f7f7f7;
-  --ink:#191919;
-  --muted:#616161;
-  --line:#d6d6d6;
-  --white:#fff;
+  --paper:#faf6f0;
+  --ink:#272127;
+  --muted:#685d5d;
+  --line:#ded3ca;
+  --white:#fffdfa;
+  --accent:#702f46;
+  --tint:#f5e5e6;
   --mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;
   --sans:Arial,Helvetica,sans-serif;
   --serif:Georgia,"Times New Roman",serif;
@@ -97,7 +99,7 @@ svg {
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(247,247,247,.96);
+  background:rgba(250,246,240,.96);
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(12px);
 }
@@ -142,10 +144,10 @@ nav {
   font-size:12px;
 }
 nav a {
-  transition:opacity .2s;
+  transition:color .2s;
 }
 nav a:hover {
-  opacity:.55;
+  color:var(--accent);
 }
 .nav-contact {
   border-bottom:1px solid var(--ink);
@@ -260,7 +262,7 @@ nav a:hover {
   color:#f5f5f5;
   position:relative;
   min-width:0;
-  box-shadow:16px 16px 0 #e9e9e9;
+  box-shadow:16px 16px 0 #ead6d4;
 }
 .pipeline-header {
   display:flex;
@@ -1267,6 +1269,216 @@ details[open]>summary>.expand-icon,.case-study[open]>summary>span {
   border-color:#b2b2b2;
   color:#454545;
 }
+/* Domain colors use the same typography, spacing and controls throughout. */
+::selection {
+  background:var(--accent);
+  color:#fffdfa;
+}
+.monogram,.button-dark {
+  background:var(--accent);
+  border-color:var(--accent);
+}
+.button-dark:hover {
+  background:#522237;
+  border-color:#522237;
+}
+.nav-contact,.all-repos {
+  border-color:var(--accent);
+}
+.hero h1 em,.section-heading h2 em,.contact h2 em {
+  color:var(--accent);
+}
+.hero-top>.eyebrow,.section-heading .eyebrow,.contact-top>.eyebrow {
+  color:var(--accent);
+}
+.availability {
+  color:var(--accent);
+}
+.pipeline {
+  background:#351c2a;
+  color:#fff5ed;
+}
+.pipeline-header .eyebrow,.stage-index,.pipeline-foot,
+.pipeline-controls button,.pipeline-controls button span {
+  color:#dfbdbd;
+}
+.pipeline-controls {
+  border-color:#855669;
+}
+.pipeline-controls button[aria-pressed=true] {
+  color:#fff5ed;
+  box-shadow:inset 0 -2px #f0c395;
+}
+.pipeline-controls button:hover {
+  background:#512a3d;
+}
+.pipeline-description p {
+  color:#eed8d5;
+}
+.pipeline-foot {
+  border-color:#754858;
+}
+.work {
+  --accent:#702f46;
+}
+.filters button[aria-pressed=true] {
+  background:var(--accent);
+  border-color:var(--accent);
+}
+.filters button[data-filter=data][aria-pressed=true] {
+  background:#80501c;
+  border-color:#80501c;
+}
+.filters button[data-filter=web][aria-pressed=true] {
+  background:#654b78;
+  border-color:#654b78;
+}
+.filters button:hover:not([aria-pressed=true]) {
+  background:#eee3d8;
+}
+.project[data-category=ai] {
+  --accent:#702f46;
+  --tint:#f5e5e6;
+  --project-line:#dfc3c9;
+}
+.project[data-category=data] {
+  --accent:#80501c;
+  --tint:#f7ebd6;
+  --project-line:#ddc7a3;
+}
+.project[data-category=web] {
+  --accent:#654b78;
+  --tint:#eee6f3;
+  --project-line:#d6c5e0;
+}
+.project {
+  border-color:var(--project-line);
+}
+.project-visual,.elibrary-mark {
+  background:var(--tint);
+  color:var(--accent);
+}
+.visual-top,.tiny-label,.visual-caption,.schema-stats span,
+.project-meta>span:first-child,.project-content h3,.project-actions .text-link,
+.case-grid .eyebrow {
+  color:var(--accent);
+}
+.query-line,.mini-flow>span:nth-child(odd),.schema-entity {
+  background:#fffdfa;
+  border-color:var(--project-line);
+}
+.schema-entity {
+  box-shadow:5px 5px 0 #e8d5b7;
+}
+.schema-entity>span,.case-study {
+  border-color:var(--project-line);
+}
+.schema-entity code,.schema-entity b {
+  color:#65533d;
+}
+.tags li {
+  color:var(--accent);
+  border-color:var(--project-line);
+  background:var(--tint);
+}
+.case-study>summary:hover {
+  background:var(--tint);
+}
+.research {
+  --accent:#f0c395;
+  background:#35243e;
+  color:#fff6f0;
+}
+.research h2 em,.research-seal span {
+  color:var(--accent);
+}
+.research-intro>.eyebrow,.publication-meta,.publication-facts dt {
+  color:#d4bacf;
+}
+.research-intro>p,.publication>p,.research-seal small,
+.citation-details,.publication .publication-subtitle,.copy-button {
+  color:#e0cfdc;
+}
+.research-seal,.publication-meta {
+  border-color:#92758f;
+}
+.publication-facts>div {
+  border-color:#785d78;
+}
+.button-light {
+  background:#f0c395;
+  border-color:#f0c395;
+  color:#35243e;
+}
+.button-light:hover {
+  background:#f6d7b5;
+  border-color:#f6d7b5;
+}
+.writing {
+  --accent:#91452b;
+  --tint:#f6e7da;
+}
+.writing-card {
+  background:var(--tint);
+  border-color:#e3cbb8;
+  border-top:3px solid var(--accent);
+}
+.writing-card h3,.writing-card .text-link {
+  color:var(--accent);
+}
+.about {
+  --accent:#80501c;
+}
+.education-gpa {
+  background:#f0e2cb;
+  color:#714715;
+}
+.education h3,.experience-item strong {
+  color:var(--accent);
+}
+.skills {
+  --accent:#654b78;
+  background:#eee7e2;
+}
+.skill-group:nth-child(1) {
+  --accent:#80501c;
+}
+.skill-group:nth-child(2) {
+  --accent:#702f46;
+}
+.skill-group:nth-child(3) {
+  --accent:#654b78;
+}
+.skill-group {
+  border-top:3px solid var(--accent);
+}
+.skill-number,.skill-group h3 {
+  color:var(--accent);
+}
+.skill-group p {
+  color:var(--muted);
+}
+.credentials-block {
+  border-color:#cdbfb6;
+}
+.credential-list li {
+  border-color:#d6c9c1;
+}
+.credential-type {
+  border-color:#bdacbd;
+}
+.credential-expired {
+  background:#e4d7cf;
+  border-color:#bea89b;
+  color:#654d40;
+}
+.contact {
+  --accent:#702f46;
+}
+.email-link,.socials a {
+  color:var(--accent);
+}
+
 @media(max-width:800px) {
   .writing-card {
     padding:24px;
@@ -1420,7 +1632,7 @@ details[open]>summary>.expand-icon,.case-study[open]>summary>span {
     max-width:550px;
     width:100%;
     justify-self:end;
-    box-shadow:10px 10px 0 #e6e6e6;
+    box-shadow:10px 10px 0 #ead6d4;
   }
   .pipeline-art {
     padding:0 38px;
@@ -1670,7 +1882,7 @@ details[open]>summary>.expand-icon,.case-study[open]>summary>span {
     gap:15px;
   }
   .pipeline {
-    box-shadow:7px 7px 0 #e5e5e5;
+    box-shadow:7px 7px 0 #ead6d4;
   }
   .pipeline-header {
     padding:19px 19px 0;
@@ -2056,8 +2268,13 @@ details[open]>summary>.expand-icon,.case-study[open]>summary>span {
     gap:30px;
   }
   .research {
+    --accent:#35243e;
     background:#fff;
     color:#111;
+  }
+  .research .eyebrow,.research .publication-subtitle,
+  .research .citation-details,.research-seal small {
+    color:#444;
   }
   .research p,.publication p,.publication-facts dt,.publication-meta {
     color:#444;

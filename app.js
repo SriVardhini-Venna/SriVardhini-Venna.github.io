@@ -28,10 +28,10 @@ document.addEventListener('click', event => {
 window.matchMedia('(min-width: 561px)').addEventListener('change', closeMenu);
 
 const stages = [
-  {label: '01 / SOURCE', description: 'Fetch research abstracts from PubMed and retain the paper metadata needed to trace each source.'},
-  {label: '02 / REPRESENT', description: 'Encode titles and abstracts with all-MiniLM-L6-v2. Persist the embeddings and paper metadata in ChromaDB.'},
-  {label: '03 / FIND', description: 'Embed a question and retrieve nearby abstracts with cosine similarity, keeping the title, PMID, and source URL.'},
-  {label: '04 / GENERATE', description: 'Pass retrieved abstracts to Mistral as context. Research mode prompts for numbered citations to the source papers.'}
+  {label: 'SOURCE', description: 'Fetch research abstracts from PubMed and retain the paper metadata needed to trace each source.'},
+  {label: 'REPRESENT', description: 'Encode titles and abstracts with all-MiniLM-L6-v2. Persist the embeddings and paper metadata in ChromaDB.'},
+  {label: 'FIND', description: 'Embed a question and retrieve nearby abstracts with cosine similarity, keeping the title, PMID, and source URL.'},
+  {label: 'GENERATE', description: 'Pass retrieved abstracts to Mistral as context. Research mode prompts for numbered citations to the source papers.'}
 ];
 const stageButtons = Array.from(document.querySelectorAll('[data-stage]'));
 stageButtons.forEach(button => button.addEventListener('click', () => {
@@ -66,7 +66,8 @@ async function copyText(value, feedbackId, successMessage, fallback) {
   }
 }
 document.getElementById('copy-citation').addEventListener('click', () => {
-  const citation = document.getElementById('citation-text').textContent;
+  const source = document.getElementById('citation-text');
+  const citation = `${source.textContent} doi: ${source.dataset.doi}.`;
   copyText(citation, 'citation-feedback', 'Citation copied.', 'Select and copy the citation below.');
 });
 document.getElementById('copy-email').addEventListener('click', () => {
